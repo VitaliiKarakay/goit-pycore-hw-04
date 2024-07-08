@@ -1,5 +1,5 @@
-import constants
-from utils import read_file_lines
+import utils.utils as utils
+from utils import constants
 
 
 def process_line(line):
@@ -12,7 +12,7 @@ def process_line(line):
 
 
 def total_salary(path):
-    lines = read_file_lines(path)
+    lines = utils.read_file_lines(path)
     salary_sum = 0
     count = 0
     for line in lines:

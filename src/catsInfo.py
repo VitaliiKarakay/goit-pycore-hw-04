@@ -1,9 +1,9 @@
-import constants
-from utils import read_file_lines
+import utils.utils as utils
+from utils import constants
 
 
 def get_cats_info(path):
-    lines = read_file_lines(path)
+    lines = utils.read_file_lines(path)
     cats_info = []
     for line in lines:
         try:
