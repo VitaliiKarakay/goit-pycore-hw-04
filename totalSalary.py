@@ -1,16 +1,5 @@
-from pathlib import Path
 import constants
-
-
-def read_file_lines(path):
-    path = Path(path)
-    try:
-        with path.open('r') as file:
-            return file.readlines()
-    except (FileNotFoundError, OSError) as e:
-        print(f"Error opening file: {e}")
-
-        return []
+from utils import read_file_lines
 
 
 def process_line(line):
