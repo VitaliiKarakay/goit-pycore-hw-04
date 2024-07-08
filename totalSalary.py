@@ -1,10 +1,9 @@
 from pathlib import Path
 import constants
 
-path = Path(constants.SALARY_FILE_PATH)
-
 
 def read_file_lines(path):
+    path = Path(path)
     try:
         with path.open('r') as file:
             return file.readlines()
@@ -38,4 +37,5 @@ def total_salary(path):
     return salary_sum, salary_sum / count
 
 
-print(total_salary(path))
+total, average = total_salary(constants.SALARY_FILE_PATH)
+print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
